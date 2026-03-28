@@ -1,0 +1,42 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+body {
+    background: #f0f2f5;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; padding: 20px;
+}
+.app-card {
+    background: #fff; width: 100%; max-width: 400px;
+    padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;
+}
+.app-logo {
+    width: 80px; height: 80px; border-radius: 15px; margin-bottom: 10px;
+}
+h1 { color: #ff0000; font-size: 24px; }
+p { color: #666; font-size: 14px; margin-bottom: 20px; }
+input {
+    width: 100%; padding: 12px; border: 2px solid #ddd;
+    border-radius: 10px; outline: none; transition: 0.3s;
+}
+input:focus { border-color: #ff0000; }
+button {
+    width: 100%; margin-top: 10px; padding: 12px;
+    background: #ff0000; color: #fff; border: none;
+    border-radius: 10px; cursor: pointer; font-weight: bold;
+}
+.result-area { margin-top: 25px; }
+.img-container img { width: 100%; border-radius: 10px; }
+.download-options { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+.dl-btn {
+    text-decoration: none; color: #fff; padding: 10px;
+    border-radius: 8px; font-size: 14px; font-weight: 600;
+}
+.max { background: #28a745; }
+.high { background: #007bff; }
+.install-banner {
+    margin-top: 20px; font-size: 12px; color: #888;
+    background: #f9f9f9; padding: 10px; border-radius: 10px;
+}

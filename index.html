@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Thumbnail Pro</title>
+    
+    <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff0000">
+    
+    <!-- Local Icons -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <header>
+            <!-- আপনার লোগো এখানে দেখাবে -->
+            <img src="icons/icon-512.png" alt="App Logo" class="app-logo">
+            <h1>Thumbnail Pro</h1>
+            <p>সেরা মানের ইউটিউব থামনেইল ডাউনলোড করুন</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="videoUrl" placeholder="ইউটিউব ভিডিওর লিঙ্ক এখানে দিন...">
+            <button onclick="getThumbnail()">থামনেইল জেনারেট করুন</button>
+        </div>
+
+        <div id="loader" class="loader" style="display: none;">প্রসেসিং হচ্ছে...</div>
+
+        <div id="resultArea" class="result-area" style="display: none;">
+            <div class="img-container">
+                <img id="thumbPreview" src="" alt="Thumbnail Preview">
+            </div>
+            
+            <div class="download-options">
+                <a id="btnMax" class="dl-btn max" href="#" download target="_blank">Download HD (1080p)</a>
+                <a id="btnHigh" class="dl-btn high" href="#" download target="_blank">Download SD (720p)</a>
+            </div>
+        </div>
+
+        <div class="install-banner" id="installBanner">
+            <p>অ্যাপটি আপনার ফোনে ইনস্টল করুন!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
